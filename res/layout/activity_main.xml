@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity" >
+
+    <!-- <EditText
+        android:id="@+id/bpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bpmLabel"
+        android:layout_alignBottom="@id/bpmLabel"
+        android:layout_toRightOf="@id/bpmLabel"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/white" >
+
+    </EditText> -->
+
+    
+
+    <TextView
+        android:id="@+id/bpmLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/bpm"
+        android:textColor="@color/white" />
+
+    
+
+    <View
+        android:id="@+id/myTransitionView"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/startStop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/measure"
+        android:background="@drawable/transition" />
+    
+    <View
+        android:id="@+id/myTransitionRedView"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/startStop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/measure"
+        android:background="@drawable/transitionred" />
+    
+    <View
+        android:id="@+id/myTransitionGreenView"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/startStop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/measure"
+        android:background="@drawable/transitiongreen" />
+
+    <TextView
+        android:id="@+id/largeMeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/myTransitionView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="65sp" />
+
+    <ToggleButton
+        android:id="@id/startStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:textOff=""
+        android:textOn=""
+        android:visibility="visible" />
+
+    <SeekBar
+        android:id="@+id/timeSignatureSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bpmSeekBar"
+        android:layout_toLeftOf="@+id/signature"
+        android:layout_toRightOf="@+id/timeSignatureLabel"
+        android:max="15"
+        android:progressDrawable="@drawable/scrubber_progress_horizontal_holo_light_red"
+        android:thumb="@drawable/scrubber_control_selector_holo_red" />
+
+    <TextView
+        android:id="@+id/measureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/measure"
+        android:layout_alignBottom="@+id/measure"
+        android:layout_alignParentLeft="true"
+        android:text="@string/measure"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/signature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/measure"
+        
+        android:layout_alignParentRight="true"
+        
+        android:text="@string/signatureDefault"
+        android:textColor="@color/white" />
+
+    <!-- <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="ToggleButton" /> -->
+
+    <TextView
+        android:id="@+id/measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeSignatureSeekBar"
+        android:layout_centerHorizontal="true"
+        android:text="-"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/red"
+        android:textSize="35sp" />
+
+    <SeekBar
+        android:id="@+id/bpmSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/bpm"
+        android:layout_toRightOf="@+id/bpmLabel"
+        android:max="160"
+        android:progressDrawable="@drawable/scrubber_progress_horizontal_holo_light_red"
+        android:thumb="@drawable/scrubber_control_selector_holo_red" />
+
+    <TextView
+        android:id="@+id/bpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bpmLabel"
+        android:layout_alignBottom="@+id/bpmLabel"
+        android:layout_alignParentRight="true"
+        android:text="@string/bpmDefault"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@id/timeSignatureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signature"
+        android:layout_alignParentLeft="true"
+        android:text="@string/signature"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

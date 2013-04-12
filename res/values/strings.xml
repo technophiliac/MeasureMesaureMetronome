@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Measure Measure Metronome</string>
+    <string name="menu_settings">Settings</string>
+    <string name="bpm">Beats Per Minute:</string>
+    <string name="meter">Meter:</string>
+    <string name="measure">Measure:</string>
+    <string name="signature">Time Signature:</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="signatureDefault">4</string>
+    <string name="bpmDefault">120</string>
+
+</resources>
